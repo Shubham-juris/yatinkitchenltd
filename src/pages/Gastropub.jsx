@@ -99,7 +99,7 @@ const Gastropub = () => {
   ];
   return (
     <>
-      <div className="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-2xl shadow-md mt-10">
+      <div className="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-2xl shadow-md mt-18">
         <h1 className="text-3xl font-bold text-center text-amber-700 border-b-2 border-amber-700 pb-2 mb-6">
           Yatin's Gastro pub
         </h1>

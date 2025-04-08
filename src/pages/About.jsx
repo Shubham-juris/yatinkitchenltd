@@ -2,7 +2,7 @@ import React from "react";
 import taj from "../assets/about/tajmahal.jpg";
 import img1 from "../assets/about/img1.jpg";
 import img2 from "../assets/about/img2.jpg";
-import img3 from "../assets/about/room.jpg";
+import img3 from "../assets/about/room.avif";
 import img4 from "../assets/about/saif.jpg";
 import img5 from "../assets/about/img3.jpg";
 
@@ -28,7 +28,7 @@ const About = () => {
     },
   ];
   return (
-    <div className="bg-orange-50 min-h-screen">
+    <div className="bg-orange-50 min-h-screen mt-18">
       <section className="flex flex-wrap justify-center gap-10 py-12 px-6">
         {sections.map((section, index) => (
           <div

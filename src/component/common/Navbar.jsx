@@ -8,12 +8,12 @@ const Navbar = () => {
   return (
     <>
       <div className="font-sans">
-        <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
-          <div className="text-orange-500 text-3xl font-bold">
+      <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-40 backdrop-blur-md shadow-md py-4 px-6 flex justify-between items-center z-50">
+      <div className="text-orange-500 text-3xl font-bold">
             Yatin's kitchen
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden ">
             <button onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? (
                 <HiX className="text-2xl text-gray-700" />
@@ -24,9 +24,9 @@ const Navbar = () => {
           </div>
 
           <nav className="hidden md:block">
-            <ul className="flex gap-6 text-gray-800 font-medium">
+            <ul className="flex gap-6 text-gray-800 font-medium ">
               <li>
-                <Link to="/" className="hover:text-orange-700">
+                <Link to="/" className="hover:text-orange-700 ">
                   Home
                 </Link>
               </li>
@@ -54,7 +54,7 @@ const Navbar = () => {
         </header>
 
         {isOpen && (
-          <div className="md:hidden px-6 py-4 bg-white shadow-md">
+          <div className="md:hidden px-6 py-4 bg-white shadow-md mt-15">
             <ul className="flex flex-col gap-4 text-gray-800 font-medium">
               <li>
                 <Link

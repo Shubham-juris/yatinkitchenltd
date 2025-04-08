@@ -124,12 +124,14 @@ const Menu = () => {
   const Vegileft = [
     {
       name: "Paneer Tikka Masala",
-      description: "cubbed cheese cooked in a tndoori clay oven with tomato sause ,onions & bell pappers ",
+      description:
+        "cubbed cheese cooked in a tndoori clay oven with tomato sause ,onions & bell pappers ",
       price: "8.99",
     },
     {
       name: "Paneer Kadhai",
-      description: "Homemade cheese cooked  in onion sause,tamatos bell pappers and gingr",
+      description:
+        "Homemade cheese cooked  in onion sause,tamatos bell pappers and gingr",
       price: "9.99",
     },
     {
@@ -157,7 +159,6 @@ const Menu = () => {
       description: "Chikpeas, tomatoes & onions in rich  sause ",
       price: "8.99",
     },
-    
   ];
   const Vegiright = [
     {
@@ -186,9 +187,109 @@ const Menu = () => {
       price: "7",
     },
   ];
+  const breads = [
+    {
+      name: "Naan",
+      description: "Traditional Indian white bread",
+      price: "2.49",
+    },
+    { name: "Roti", description: "Whole wheat bread", price: "2.49" },
+    {
+      name: "Parantha",
+      description: "Whole wheat bread with butter",
+      price: "2.99",
+    },
+    {
+      name: "Garlic Naan",
+      description: "White bread baked with garlic and cilantro",
+      price: "3.99",
+    },
+    {
+      name: "Cheese Naan",
+      description: "White bread stuffed with grated Indian cheese",
+      price: "3.99",
+    },
+    {
+      name: "Alu Naan",
+      description: "White bread baked with seasoned potatoes and peas",
+      price: "3.99",
+    },
+    {
+      name: "Onion Kulcha",
+      description: "White bread stuffed with lightly spiced onion",
+      price: "3.99",
+    },
+    {
+      name: "Alu Parantha",
+      description: "White bread stuffed with seasonal potatoes and peas",
+      price: "3.99",
+    },
+    {
+      name: "Gobi Prantha",
+      description: "Whole wheat bread stuffed with cauliflower",
+      price: "3.99",
+    },
+    {
+      name: "Keema Naan",
+      description: "Whole wheat bread stuffed with kabab",
+      price: "4.49",
+    },
+    {
+      name: "Kashmiri Naan",
+      description:
+        "White bread stuffed with sweet chutney, raisins and cashews",
+      price: "4.49",
+    },
+    {
+      name: "Bread Basket",
+      description: "Assorted Indian breads",
+      price: "7.99",
+    },
+  ];
+  const chineseItems = [
+    {
+      name: "Chilli Paneer",
+      description:
+        "Cheese cooked in sweet and tangy sauce, onions & bell pepper",
+      price: "14.99",
+    },
+    {
+      name: "Noodles",
+      description: "Noodles cooked in green pepper, onion & Masala",
+      price: "10.99",
+    },
+    {
+      name: "Veg Manchurian",
+      description:
+        "Vegetables fried batter balls tossed in sauce, dry or with gravy",
+      price: "12.99",
+    },
+    {
+      name: "Chilly Chicken",
+      description:
+        "Dry Chicken assorted with Indian spices, onions, & green pepper",
+      price: "14.99",
+    },
+    {
+      name: "Chicken Manchurian",
+      description: "Chicken balls fried with gravy & hot sauce",
+      price: "14.99",
+    },
+    {
+      name: "Wok Platter",
+      description:
+        "Green vegetables and chicken tossed with soya sauce and other sauces",
+      price: "14.99",
+    },
+    {
+      name: "Fried Rice and Manchurian Balls",
+      description: "Fried basmati rice served with vegetable balls",
+      price: "12.99",
+    },
+  ];
 
   return (
-    <div className="max-w-5xl mx-auto p-6">
+    <div className="max-w-5xl mx-auto p-6 mt-20">
       <h2 className="text-2xl font-semibold text-center border-t border-b border-orange-300 py-4 text-orange-500">
         Menu
       </h2>
@@ -306,6 +407,111 @@ const Menu = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="mt-15">
+        <h2 className="text-3xl font-semibold text-orange-500 mb-4 ">
+          Tandoori Breads
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 ">
+          {breads.map((item, index) => (
+            <div key={index} className="flex justify-between items-start">
+              <div>
+                <h3 className="text-lg font-medium">{item.name}</h3>
+                <p className="text-sm text-gray-600">{item.description}</p>
+              </div>
+              <span className="text-md font-semibold">${item.price}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="mt-20">
+        <h2 className="text-3xl font-semibold text-orange-500 mb-4">
+          Chinese (Indian style)
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {chineseItems.map((item, index) => (
+            <div key={index} className="flex justify-between items-start">
+              <div>
+                <h3 className="text-lg font-medium">{item.name}</h3>
+                <p className="text-sm text-gray-600">{item.description}</p>
+              </div>
+              <span className="text-md font-semibold">${item.price}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="mt-20">
+      <h2 className="text-3xl font-semibold text-orange-500 mb-4">Rice</h2>
+      <div className="grid grid-cols-2 gap-4 mb-6">
+        <div>
+          <p className="font-medium">Vegetable Biryani</p>
+          <p className="text-sm text-gray-600">
+            Fresh vegetables in a lightly spiced sauce with herbs, baked with
+            basmati rice
+          </p>
+          <p className="font-semibold mt-1">$9.99</p>
+        </div>
+        <div>
+          <p className="font-medium">Jeera and Green peas rice</p>
+          <p className="font-semibold mt-1">$3.99</p>
+        </div>
+        <div>
+          <p className="font-medium">Basmati Rice</p>
+          <p className="text-sm text-gray-600">White rice</p>
+          <p className="font-semibold mt-1">$2.99</p>
+        </div>
+        <div>
+          <p className="font-medium">Non veg Biryani</p>
+          <p className="font-semibold mt-1">$12.99</p>
+        </div>
+        <div />
+        <div>
+          <p className="font-medium">Egg Biryani</p>
+          <p className="font-semibold mt-1">$11.99</p>
+        </div>
+      </div>
+
+      <hr className="border-gray-300 my-6" />
+
+      {/* Section: Pastas */}
+      <h2 className="text-3xl font-semibold text-orange-500 mb-4">Pastas</h2>
+      <p className="text-sm text-gray-700 mb-4">
+        All of our pasta comes with garlic toast and your choice of marinara
+        sauce, Home Style Meat Sauce or Alfredo sauce. You may also have your
+        pasta baked and topped with a special blend of Mozzarella Cheese
+      </p>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <p className="font-medium">Spaghetti</p>
+          <p className="font-semibold mt-1">$13.99</p>
+        </div>
+        <div>
+          <p className="font-medium">Chicken Lasagna</p>
+          <p className="font-semibold mt-1">$16.45</p>
+        </div>
+        <div>
+          <p className="font-medium">Spaghetti & Meat balls</p>
+          <p className="font-semibold mt-1">$15.70</p>
+        </div>
+        <div>
+          <p className="font-medium">Greek Lasagna</p>
+          <p className="text-sm text-gray-600">Black Olives and Feta Cheese</p>
+          <p className="font-semibold mt-1">$14.45</p>
+        </div>
+        <div>
+          <p className="font-medium">Fettuccine Lasagna Alfredo</p>
+          <p className="font-semibold mt-1">$13.45</p>
+        </div>
+        <div>
+          <p className="font-medium">Lasagna Florentine</p>
+          <p className="text-sm text-gray-600">Spinach and Feta Cheese</p>
+          <p className="font-semibold mt-1">$14.45</p>
+        </div>
+        <div>
+          <p className="font-medium">Lasagna</p>
+          <p className="font-semibold mt-1">$13.95</p>
+        </div>
+      </div>
       </div>
     </div>
   );

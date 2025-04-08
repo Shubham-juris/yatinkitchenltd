@@ -1,10 +1,10 @@
 import React from "react";
 import img1 from "../assets/home/img1.jpg";
-import img2 from "../assets/about/img1.jpg"
-import img3 from "../assets/about/img2.jpg"
-import img4 from "../assets/home/img4.jpeg"
-import img5 from "../assets/home/img5.jpg"
-import all from '../assets/home/dishes.avif'
+import img2 from "../assets/about/img1.jpg";
+import img3 from "../assets/about/img2.jpg";
+import img4 from "../assets/home/img4.jpeg";
+import img5 from "../assets/home/img5.jpg";
+import all from "../assets/home/dishes.avif";
 import one from "../assets/home/one.jpg";
 import tikka from "../assets/home/tikka.jpg";
 import { FaFacebookF, FaInstagram, FaXTwitter, FaYelp } from "react-icons/fa6";
@@ -13,12 +13,12 @@ const Home = () => {
   const images = [img5, img2, img4, img3, tikka];
 
   return (
-    <div className="font-sans">
+    <div className="font-sans mt-17 ">
       <div
         className="h-[90vh] bg-cover bg-center flex items-center justify-center px-4"
         style={{ backgroundImage: `url(${img1})` }}
       >
-        <div className="w-72 h-72 bg-orange-400 text-center text-gray-900 rounded-full flex flex-col justify-center items-center px-6 shadow-lg">
+        <div className="w-[60vw] h-[60vw] max-w-[300px] max-h-[300px] bg-orange-500 text-center text-gray-900 rounded-full flex flex-col justify-center items-center px-6 shadow-lg">
           <h2 className="text-lg font-semibold mb-3">
             Welcome to
             <br />
@@ -34,19 +34,19 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="text-center py-12 px-4">
+      <div className="text-center py-12 px-4 ">
         <h2 className="text-3xl font- bold text-orange-500 mb-6">
           Photo Gallery
         </h2>
-        <div className="overflow-x-auto whitespace-nowrap scrollbar-hide">
+        <div className="overflow-x-auto whitespace-nowrap scrollbar-hide className flex flex-wrap justify-center gap-10 py-12 px-6">
           <div className="flex gap-4 px-2 snap-x">
             {images.map((src, index) => (
               <img
-              key={index}
-              src={src}
-              alt={`Dish ${index + 1}`}
-              className="h-100 w-150 rounded-lg shadow-md inline-block snap-start object-cover"
-            />
+                key={index}
+                src={src}
+                alt={`Dish ${index + 1}`}
+                className="h-100 w-150 rounded-lg shadow-md inline-block snap-start object-cover"
+              />
             ))}
           </div>
         </div>
@@ -60,23 +60,23 @@ const Home = () => {
           <img
             src={tikka}
             alt="Taj Mahal through arch"
-            className="w-full max-w-4xl rounded-xl shadow-lg mb-8"
+            className="w-full max-w-4xl rounded-xl shadow-lg"
           />
         </div>
-        <h2 className="text-2xl font-semibold mt-8">Butter Chicken</h2>
+        <h2 className="text-2xl font-semibold">Butter Chicken</h2>
         <p className="mt-8 px-4 md:px-20">
           Restaurant's worn Buttor chicken is TO DIE FOR! They definitely earned
           their spot on last year's Top Spot in Calgary, CANADA!
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-10 px-4 md:px-20">
+      <div className="flex flex-wrap justify-center items-center bg-amber-100 gap-10 px-4 md:px-20 ">
         <div className="w-full md:w-[45%] text-center">
           <div className="rounded-xl shadow-md overflow-hidden">
             <img
               src={one}
               alt="Avenue Calgary"
-              className="w-full h-[35rem] object-cover"
+              className="w-full h-[35rem] object-cover flex flex-wrap justify-center gap-10 py-12 px-6"
             />
           </div>
           <div className="mt-4 px-4">
@@ -95,7 +95,7 @@ const Home = () => {
             <img
               src={all}
               alt="Calgary Herald"
-              className="w-full h-[35rem] object-cover"
+              className="w-full h-[35rem] object-cover flex flex-wrap justify-center gap-10 py-12 px-6"
             />
           </div>
           <div className="mt-4 px-4">
