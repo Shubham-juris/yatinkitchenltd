@@ -1,18 +1,19 @@
 import React from "react";
-import img from "../assets/home/img.jpg";
 import img1 from "../assets/home/img1.jpg";
-import chicken from "../assets/home/buttor.jpg";
-import all from '../assets/home/all.webp'
-import one from '../assets/home/one.jpg'
-import tikka from '../assets/home/tikka.jpg'
-
-
+import img2 from "../assets/about/img1.jpg"
+import img3 from "../assets/about/img2.jpg"
+import img4 from "../assets/home/img4.jpeg"
+import img5 from "../assets/home/img5.jpg"
+import all from '../assets/home/dishes.avif'
+import one from "../assets/home/one.jpg";
+import tikka from "../assets/home/tikka.jpg";
 import { FaFacebookF, FaInstagram, FaXTwitter, FaYelp } from "react-icons/fa6";
 
 const Home = () => {
+  const images = [img5, img2, img4, img3, tikka];
+
   return (
     <div className="font-sans">
-      {/* Hero Section */}
       <div
         className="h-[90vh] bg-cover bg-center flex items-center justify-center px-4"
         style={{ backgroundImage: `url(${img1})` }}
@@ -34,33 +35,33 @@ const Home = () => {
       </div>
 
       <div className="text-center py-12 px-4">
-        <h2 className="text-2xl font-semibold text-orange-700 mb-6">
+        <h2 className="text-3xl font- bold text-orange-500 mb-6">
           Photo Gallery
         </h2>
         <div className="overflow-x-auto whitespace-nowrap scrollbar-hide">
           <div className="flex gap-4 px-2 snap-x">
-            {[...Array(5)].map((_, index) => (
+            {images.map((src, index) => (
               <img
-                key={index}
-                src={img}
-                alt={`Dish ${index + 1}`}
-                className="h-60 rounded-lg shadow-md inline-block snap-start"
-              />
+              key={index}
+              src={src}
+              alt={`Dish ${index + 1}`}
+              className="h-100 w-150 rounded-lg shadow-md inline-block snap-start object-cover"
+            />
             ))}
           </div>
         </div>
       </div>
 
       <div className="text-center py-12 px-4">
-        <h2 className="text-2xl font-semibold text-orange-700 mb-6">
+        <h2 className="text-3xl font-semibold text-orange-500 mb-6">
           Best Seller
         </h2>
         <div className="bg-white py-10 px-4 flex flex-col items-center">
-               <img
-                 src={tikka}
-                 alt="Taj Mahal through arch"
-                 className="w-full max-w-4xl rounded-xl shadow-lg mb-8"
-               />
+          <img
+            src={tikka}
+            alt="Taj Mahal through arch"
+            className="w-full max-w-4xl rounded-xl shadow-lg mb-8"
+          />
         </div>
         <h2 className="text-2xl font-semibold mt-8">Butter Chicken</h2>
         <p className="mt-8 px-4 md:px-20">
