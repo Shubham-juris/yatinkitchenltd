@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import img1 from "../assets/home/img1.jpg";
 import img2 from "../assets/about/img1.jpg";
 import img3 from "../assets/about/img2.jpg";
@@ -9,16 +10,71 @@ import one from "../assets/home/one.jpg";
 import tikka from "../assets/home/tikka.jpg";
 import { FaFacebookF, FaInstagram, FaXTwitter, FaYelp } from "react-icons/fa6";
 
+const bannerVariants = {
+  initial: { opacity: 0, scale: 0.9 },
+  animate: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeInOut" } },
+};
+
+const galleryVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { delayChildren: 0.3, staggerChildren: 0.2 } },
+};
+
+const imageVariants = {
+  initial: { opacity: 0, x: -20 },
+  animate: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeInOut" } },
+};
+
+const bestSellerVariants = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } },
+};
+
+const reviewVariants = {
+  initial: { opacity: 0, scale: 0.95 },
+  animate: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeInOut" } },
+};
+
+const socialVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { delayChildren: 0.4, staggerChildren: 0.1 } },
+};
+
+const socialIconVariants = {
+  initial: { opacity: 0, scale: 0.8 },
+  animate: { opacity: 1, scale: 1, transition: { duration: 0.3, ease: "easeInOut" } },
+  hover: { scale: 1.1, transition: { duration: 0.2 } },
+};
+
+const visitUsVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { delayChildren: 0.3, staggerChildren: 0.1 } },
+};
+
+const visitUsItemVariants = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeInOut" } },
+};
+
 const Home = () => {
   const images = [img5, img2, img4, img3, tikka];
 
   return (
-    <div className="font-sans mt-17 ">
-      <div
+    <motion.div
+      className="font-sans mt-17"
+      initial="initial"
+      animate="animate"
+      variants={visitUsVariants}
+    >
+      <motion.div
         className="h-[90vh] bg-cover bg-center flex items-center justify-center px-4"
         style={{ backgroundImage: `url(${img1})` }}
+        variants={bannerVariants}
       >
-        <div className="w-[60vw] h-[60vw] max-w-[300px] max-h-[300px] bg-orange-500 text-center text-gray-900 rounded-full flex flex-col justify-center items-center px-6 shadow-lg">
+        <motion.div
+          className="w-[60vw] h-[60vw] max-w-[300px] max-h-[300px] bg-orange-500 text-center text-gray-900 rounded-full flex flex-col justify-center items-center px-6 shadow-lg"
+          variants={bannerVariants}
+        >
           <h2 className="text-lg font-semibold mb-3">
             Welcome to
             <br />
@@ -31,36 +87,38 @@ const Home = () => {
           >
             Call to order
           </button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="text-center py-12 px-4 ">
+      <motion.div className="text-center py-12 px-4 " variants={galleryVariants}>
         <h2 className="text-3xl font- bold text-orange-500 mb-6">
           Photo Gallery
         </h2>
-        <div className="overflow-x-auto whitespace-nowrap scrollbar-hide className flex flex-wrap justify-center gap-10 py-12 px-6">
+        <motion.div className="overflow-x-auto whitespace-nowrap scrollbar-hide className flex flex-wrap justify-center gap-10 py-12 px-6" variants={galleryVariants}>
           <div className="flex gap-4 px-2 snap-x">
             {images.map((src, index) => (
-              <img
+              <motion.img
                 key={index}
                 src={src}
                 alt={`Dish ${index + 1}`}
                 className="h-100 w-150 rounded-lg shadow-md inline-block snap-start object-cover"
+                variants={imageVariants}
               />
             ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="text-center py-12 px-4">
+      <motion.div className="text-center py-12 px-4" variants={bestSellerVariants}>
         <h2 className="text-3xl font-semibold text-orange-500 mb-6">
           Best Seller
         </h2>
         <div className="bg-white py-10 px-4 flex flex-col items-center">
-          <img
+          <motion.img
             src={tikka}
-            alt="Taj Mahal through arch"
+            alt="Butter Chicken"
             className="w-full max-w-4xl rounded-xl shadow-lg"
+            variants={imageVariants}
           />
         </div>
         <h2 className="text-2xl font-semibold">Butter Chicken</h2>
@@ -68,17 +126,17 @@ const Home = () => {
           Restaurant's worn Buttor chicken is TO DIE FOR! They definitely earned
           their spot on last year's Top Spot in Calgary, CANADA!
         </p>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-wrap justify-center items-center bg-amber-100 gap-10 px-4 md:px-20 ">
+      <motion.div className="flex flex-wrap justify-center items-center bg-amber-100 gap-10 px-4 md:px-20 py-12" variants={reviewVariants}>
         <div className="w-full md:w-[45%] text-center">
-          <div className="rounded-xl shadow-md overflow-hidden">
+          <motion.div className="rounded-xl shadow-md overflow-hidden" variants={imageVariants}>
             <img
               src={one}
               alt="Avenue Calgary"
               className="w-full h-[35rem] object-cover flex flex-wrap justify-center gap-10 py-12 px-6"
             />
-          </div>
+          </motion.div>
           <div className="mt-4 px-4">
             <h3 className="text-lg font-semibold text-gray-800">
               Avenue Calgary
@@ -91,13 +149,13 @@ const Home = () => {
         </div>
 
         <div className="w-full md:w-[45%] text-center">
-          <div className="rounded-xl shadow-md overflow-hidden">
+          <motion.div className="rounded-xl shadow-md overflow-hidden" variants={imageVariants}>
             <img
               src={all}
               alt="Calgary Herald"
               className="w-full h-[35rem] object-cover flex flex-wrap justify-center gap-10 py-12 px-6"
             />
-          </div>
+          </motion.div>
           <div className="mt-4 px-4">
             <h3 className="text-lg font-semibold text-gray-800">
               Calgary Herald
@@ -108,49 +166,55 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white py-12 px-6 text-center mt-20">
-        <h2 className="text-2xl font-semibold text-orange-800">Social</h2>
-        <hr className="border-t-2 border-orange-400 w-1/2 mx-auto mb-4" />
-        <div className="flex justify-center gap-6 text-3xl text-gray-700">
+      <motion.div className="bg-white py-12 px-6 text-center mt-20" variants={socialVariants}>
+        <h2 className="text-2xl font-semibold text-orange-500">Social</h2>
+        <hr className="border-t-2 border-orange-500 w-1/2 mx-auto mb-4" />
+        <motion.div className="flex justify-center gap-6 text-3xl text-gray-700" variants={socialVariants}>
           {[FaFacebookF, FaInstagram, FaXTwitter, FaYelp].map((Icon, i) => (
-            <a href="#" key={i} className="hover:opacity-75 transition">
+            <motion.a
+              href="#"
+              key={i}
+              className="hover:opacity-75 transition"
+              variants={socialIconVariants}
+              whileHover="hover"
+            >
               <Icon />
-            </a>
+            </motion.a>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="min-h-screen bg-white text-gray-800 px-6 py-12">
+      <motion.div className="min-h-screen bg-white text-gray-800 px-6 py-12" variants={visitUsVariants}>
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-semibold text-center text-orange-800 mb-2">
+          <motion.h1 className="text-3xl font-semibold text-center text-orange-500 mb-2" variants={visitUsItemVariants}>
             Visit Us
-          </h1>
-          <hr className="border-t-2 border-orange-400 w-1/2 mx-auto mb-4" />
+          </motion.h1>
+          <motion.hr className="border-t-2 border-orange-400 w-1/2 mx-auto mb-4" variants={visitUsItemVariants} />
 
-          <div className="text-center mb-8">
+          <motion.div className="text-center mb-8" variants={visitUsItemVariants}>
             <h2 className="text-lg font-semibold mb-2">Special Requests?</h2>
             <p>
               Do you have dietary concerns? Questions about an upcoming event?
               Drop us a line, and we'll get back to you soon!
             </p>
-          </div>
+          </motion.div>
 
           <div className="text-center mb-8 space-y-4">
-            <div>
+            <motion.div variants={visitUsItemVariants}>
               <h2 className="text-xl font-semibold text-gray-900">
                 Yatin's kitchen
               </h2>
               <p>5216 C 50th avenue, Wetaskiwin, AB, Canada, Alberta</p>
               <a
                 href="tel:+17803122121"
-                className="text-orange-600 font-medium block"
+                className="text-orange-500 font-medium block"
               >
                 780-312-2121
               </a>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div variants={visitUsItemVariants}>
               <h3 className="font-semibold text-gray-900">Yatin's gastropub</h3>
               <p>1177 1st SW, Medicine Hat, AB T1A 3Z5, Canada</p>
               <a
@@ -159,10 +223,10 @@ const Home = () => {
               >
                 +1 403-527-9988
               </a>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="text-center">
+          <motion.div className="text-center" variants={visitUsItemVariants}>
             <h2 className="text-xl font-semibold text-gray-900 mb-2">Hours</h2>
             <p className="text-orange-700 mb-1">
               Open today{" "}
@@ -170,16 +234,16 @@ const Home = () => {
             </p>
             <p>Monday - Saturday: 11am - 9pm</p>
             <p>Sunday: 04.00pm - 9.00pm</p>
-          </div>
+          </motion.div>
 
-          <div className="text-center mt-8">
+          <motion.div className="text-center mt-8" variants={visitUsItemVariants}>
             <button className="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition">
               Contact Us
             </button>
-          </div>
+          </motion.div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

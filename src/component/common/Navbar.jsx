@@ -26,22 +26,22 @@ const Navbar = () => {
           <nav className="hidden md:block">
             <ul className="flex gap-6 text-gray-800 font-medium ">
               <li>
-                <Link to="/" className="hover:text-orange-700 ">
+                <Link to="/" className="hover:text-orange-500 ">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/Menu" className="hover:text-orange-700">
+                <Link to="/Menu" className="hover:text-orange-500">
                   Menu
                 </Link>
               </li>
               <li>
-                <Link to="/About" className="hover:text-orange-700">
+                <Link to="/About" className="hover:text-orange-500">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/Gastropub" className="hover:text-orange-700">
+                <Link to="/Gastropub" className="hover:text-orange-500">
                   Yatin's Gastropub
                 </Link>
               </li>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <Link
                   to="/"
                   onClick={() => setIsOpen(false)}
-                  className="hover:text-orange-700"
+                  className="hover:text-orange-500"
                 >
                   Home
                 </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <Link
                   to="/Menu"
                   onClick={() => setIsOpen(false)}
-                  className="hover:text-orange-700"
+                  className="hover:text-orange-500"
                 >
                   Menu
                 </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
                 <Link
                   to="/About"
                   onClick={() => setIsOpen(false)}
-                  className="hover:text-orange-700"
+                  className="hover:text-orange-500"
                 >
                   About Us
                 </Link>
@@ -87,7 +87,7 @@ const Navbar = () => {
                 <Link
                   to="/Gastropub"
                   onClick={() => setIsOpen(false)}
-                  className="hover:text-orange-700"
+                  className="hover:text-orange-500"
                 >
                   Yatin's Gastropub
                 </Link>
