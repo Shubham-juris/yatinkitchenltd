@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-
+import logo from '../../assets/about/logo.png'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <div className="font-sans">
-      <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-40 backdrop-blur-md shadow-md py-4 px-6 flex justify-between items-center z-50">
-      <div className="text-orange-500 text-3xl font-bold">
-            Yatin's kitchen
+        <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-40 backdrop-blur-md shadow-md py-4 px-6 flex justify-between items-center z-50">
+          <div className="flex items-center">
+            <img src= {logo} alt="Yatin's Kitchen Logo" className="h-13 w-auto mr-2" />
+            <div className="text-orange-500 text-3xl font-bold">
+              Yatin's kitchen
+            </div>
           </div>
 
-          <div className="md:hidden ">
+          <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? (
                 <HiX className="text-2xl text-gray-700" />
@@ -24,9 +27,9 @@ const Navbar = () => {
           </div>
 
           <nav className="hidden md:block">
-            <ul className="flex gap-6 text-gray-800 font-medium ">
+            <ul className="flex gap-6 text-gray-800 font-medium">
               <li>
-                <Link to="/" className="hover:text-orange-500 ">
+                <Link to="/" className="hover:text-orange-500">
                   Home
                 </Link>
               </li>
