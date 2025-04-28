@@ -9,51 +9,85 @@ import all from "../assets/home/dishes.avif";
 import one from "../assets/home/one.jpg";
 import tikka from "../assets/home/tikka.jpg";
 import { FaFacebookF, FaInstagram, FaXTwitter, FaYelp } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const bannerVariants = {
   initial: { opacity: 0, scale: 0.9 },
-  animate: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeInOut" } },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeInOut" },
+  },
 };
 
 const galleryVariants = {
   initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { delayChildren: 0.3, staggerChildren: 0.2 } },
+  animate: {
+    opacity: 1,
+    transition: { delayChildren: 0.3, staggerChildren: 0.2 },
+  },
 };
 
 const imageVariants = {
   initial: { opacity: 0, x: -20 },
-  animate: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeInOut" } },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.4, ease: "easeInOut" },
+  },
 };
 
 const bestSellerVariants = {
   initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
 };
 
 const reviewVariants = {
   initial: { opacity: 0, scale: 0.95 },
-  animate: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeInOut" } },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.4, ease: "easeInOut" },
+  },
 };
 
 const socialVariants = {
   initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { delayChildren: 0.4, staggerChildren: 0.1 } },
+  animate: {
+    opacity: 1,
+    transition: { delayChildren: 0.4, staggerChildren: 0.1 },
+  },
 };
 
 const socialIconVariants = {
   initial: { opacity: 0, scale: 0.8 },
-  animate: { opacity: 1, scale: 1, transition: { duration: 0.3, ease: "easeInOut" } },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.3, ease: "easeInOut" },
+  },
   hover: { scale: 1.1, transition: { duration: 0.2 } },
 };
 
 const visitUsVariants = {
   initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { delayChildren: 0.3, staggerChildren: 0.1 } },
+  animate: {
+    opacity: 1,
+    transition: { delayChildren: 0.3, staggerChildren: 0.1 },
+  },
 };
 
 const visitUsItemVariants = {
   initial: { opacity: 0, y: 10 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeInOut" } },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.3, ease: "easeInOut" },
+  },
 };
 
 const Home = () => {
@@ -90,11 +124,17 @@ const Home = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div className="text-center py-12 px-4 " variants={galleryVariants}>
+      <motion.div
+        className="text-center py-12 px-4 "
+        variants={galleryVariants}
+      >
         <h2 className="text-3xl font- bold text-orange-500 mb-6">
           Photo Gallery
         </h2>
-        <motion.div className="overflow-x-auto whitespace-nowrap scrollbar-hide className flex flex-wrap justify-center gap-10 py-12 px-6" variants={galleryVariants}>
+        <motion.div
+          className="overflow-x-auto whitespace-nowrap scrollbar-hide className flex flex-wrap justify-center gap-10 py-12 px-6"
+          variants={galleryVariants}
+        >
           <div className="flex gap-4 px-2 snap-x">
             {images.map((src, index) => (
               <motion.img
@@ -109,7 +149,10 @@ const Home = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div className="text-center py-12 px-4" variants={bestSellerVariants}>
+      <motion.div
+        className="text-center py-12 px-4"
+        variants={bestSellerVariants}
+      >
         <h2 className="text-3xl font-semibold text-orange-500 mb-6">
           Best Seller
         </h2>
@@ -128,9 +171,15 @@ const Home = () => {
         </p>
       </motion.div>
 
-      <motion.div className="flex flex-wrap justify-center items-center bg-amber-100 gap-10 px-4 md:px-20 py-12" variants={reviewVariants}>
+      <motion.div
+        className="flex flex-wrap justify-center items-center bg-amber-100 gap-10 px-4 md:px-20 py-12"
+        variants={reviewVariants}
+      >
         <div className="w-full md:w-[45%] text-center">
-          <motion.div className="rounded-xl shadow-md overflow-hidden" variants={imageVariants}>
+          <motion.div
+            className="rounded-xl shadow-md overflow-hidden"
+            variants={imageVariants}
+          >
             <img
               src={one}
               alt="Avenue Calgary"
@@ -149,7 +198,10 @@ const Home = () => {
         </div>
 
         <div className="w-full md:w-[45%] text-center">
-          <motion.div className="rounded-xl shadow-md overflow-hidden" variants={imageVariants}>
+          <motion.div
+            className="rounded-xl shadow-md overflow-hidden"
+            variants={imageVariants}
+          >
             <img
               src={all}
               alt="Calgary Herald"
@@ -168,10 +220,16 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <motion.div className="bg-white py-12 px-6 text-center mt-20" variants={socialVariants}>
+      <motion.div
+        className="bg-white py-12 px-6 text-center mt-20"
+        variants={socialVariants}
+      >
         <h2 className="text-2xl font-semibold text-orange-500">Social</h2>
         <hr className="border-t-2 border-orange-500 w-1/2 mx-auto mb-4" />
-        <motion.div className="flex justify-center gap-6 text-3xl text-gray-700" variants={socialVariants}>
+        <motion.div
+          className="flex justify-center gap-6 text-3xl text-gray-700"
+          variants={socialVariants}
+        >
           {[FaFacebookF, FaInstagram, FaXTwitter, FaYelp].map((Icon, i) => (
             <motion.a
               href="#"
@@ -186,14 +244,26 @@ const Home = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div className="min-h-screen bg-white text-gray-800 px-6 py-12" variants={visitUsVariants}>
+      <motion.div
+        className="min-h-screen bg-white text-gray-800 px-6 py-12"
+        variants={visitUsVariants}
+      >
         <div className="max-w-4xl mx-auto">
-          <motion.h1 className="text-3xl font-semibold text-center text-orange-500 mb-2" variants={visitUsItemVariants}>
+          <motion.h1
+            className="text-3xl font-semibold text-center text-orange-500 mb-2"
+            variants={visitUsItemVariants}
+          >
             Visit Us
           </motion.h1>
-          <motion.hr className="border-t-2 border-orange-400 w-1/2 mx-auto mb-4" variants={visitUsItemVariants} />
+          <motion.hr
+            className="border-t-2 border-orange-400 w-1/2 mx-auto mb-4"
+            variants={visitUsItemVariants}
+          />
 
-          <motion.div className="text-center mb-8" variants={visitUsItemVariants}>
+          <motion.div
+            className="text-center mb-8"
+            variants={visitUsItemVariants}
+          >
             <h2 className="text-lg font-semibold mb-2">Special Requests?</h2>
             <p>
               Do you have dietary concerns? Questions about an upcoming event?
@@ -236,10 +306,16 @@ const Home = () => {
             <p>Sunday: 04.00pm - 9.00pm</p>
           </motion.div>
 
-          <motion.div className="text-center mt-8" variants={visitUsItemVariants}>
-            <button className="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+          <motion.div
+            className="text-center mt-8"
+            variants={visitUsItemVariants}
+          >
+            <Link
+              to="/Contactus"
+              className="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition inline-block"
+            >
               Contact Us
-            </button>
+            </Link>
           </motion.div>
         </div>
       </motion.div>

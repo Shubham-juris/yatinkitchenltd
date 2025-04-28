@@ -7,6 +7,7 @@ import img3 from "../assets/about/room.avif";
 import img4 from "../assets/about/saif.jpg";
 import img5 from "../assets/about/img3.jpg";
 
+
 const sectionVariants = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -190,41 +191,10 @@ const About = () => {
           className="w-full max-w-2xl text-center border-t border-orange-300 pt-10"
           variants={contactVariants}
         >
-          <motion.h2 className="text-orange-500 text-xl font-semibold mb-4" variants={textVariants}>
-            Contact Us
-          </motion.h2>
-          <motion.p className="text-gray-700 mb-6" variants={textVariants}>
-            Drop us a line!
-          </motion.p>
-          <motion.form className="space-y-4" variants={textVariants}>
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
-            />
-            <textarea
-              placeholder="Message"
-              rows="4"
-              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
-            />
-            <button
-              type="submit"
-              className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-orange-600 transition duration-300"
-            >
-              Send Message
-            </button>
-            <p className="text-sm text-center text-gray-600">
-              This site is protected by reCAPTCHA and the Google Privacy Policy
-              and Terms of Service apply.
-            </p>
-          </motion.form>
+        
+            
           <div className="text-center">
-            <motion.h2 className="text-xl font-semibold mb-2 mt-20" variants={textVariants}>
+            <motion.h2 className="text-xl font-semibold mt-10" variants={textVariants}>
               Better yet, see us in person!
             </motion.h2>
             <motion.p className="text-gray-700" variants={textVariants}>
@@ -238,7 +208,7 @@ const About = () => {
         className="mt-5 flex flex-col items-center justify-center bg-white text-gray-800 px-4 py-10"
         variants={locationVariants}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div variants={locationItemVariants}>
             <h3 className="font-bold text-lg mb-2">Yatin's kitchen</h3>
             <p>1177 1st Medicine hat, Alberta, Canada,</p>

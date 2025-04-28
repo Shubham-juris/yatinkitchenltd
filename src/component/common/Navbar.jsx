@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-import logo from '../../assets/about/logo.png'
+import logo from "../../assets/about/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,10 +10,16 @@ const Navbar = () => {
       <div className="font-sans">
         <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-40 backdrop-blur-md shadow-md py-4 px-6 flex justify-between items-center z-50">
           <div className="flex items-center">
-            <img src= {logo} alt="Yatin's Kitchen Logo" className="h-13 w-auto mr-2" />
-            <div className="text-orange-500 text-3xl font-bold">
-              Yatin's kitchen
-            </div>
+            <Link to="/" className="flex items-center">
+              <img
+                src={logo}
+                alt="Yatin's Kitchen Logo"
+                className="h-13 w-auto mr-2"
+              />
+              <div className="text-orange-500 text-3xl font-bold">
+                Yatin's kitchen
+              </div>
+            </Link>
           </div>
 
           <div className="md:hidden">
@@ -44,6 +50,11 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/Contactus" className="hover:text-orange-500">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
                 <Link to="/Gastropub" className="hover:text-orange-500">
                   Yatin's Gastropub
                 </Link>
@@ -57,7 +68,7 @@ const Navbar = () => {
         </header>
 
         {isOpen && (
-          <div className="md:hidden px-6 py-4 bg-white shadow-md mt-15">
+          <div className="md:hidden px-6 py-4 bg-white shadow-md mt-20 fixed top-0 left-0">
             <ul className="flex flex-col gap-4 text-gray-800 font-medium">
               <li>
                 <Link
@@ -84,6 +95,15 @@ const Navbar = () => {
                   className="hover:text-orange-500"
                 >
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Contactus"
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-orange-500"
+                >
+                  Contact Us
                 </Link>
               </li>
               <li>
