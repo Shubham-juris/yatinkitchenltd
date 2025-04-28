@@ -9,12 +9,12 @@ const Navbar = () => {
     <>
       <div className="font-sans">
         <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-40 backdrop-blur-md shadow-md py-4 px-6 flex justify-between items-center z-50">
-          <Link to="/"><div className="flex items-center">
+         <div className="flex items-center">
             <img src= {logo} alt="Yatin's Kitchen Logo" className="h-13 w-auto mr-2" />
-            <div className="text-orange-500 text-3xl font-bold">
+            <Link to="/"> <div className="text-orange-500 text-3xl font-bold">
               Yatin's kitchen
-            </div>
-          </div></Link>
+            </div></Link>
+          </div>
 
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
