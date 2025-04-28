@@ -7,7 +7,7 @@
 //       <div className="text-center">
        
 //         <p className="text-sm text-gray-400 mb-1">
-//           Copyright © 2018 Yatin’s kitchen - All Rights Reserved.
+//           Copyright © 2025 Yatin’s kitchen - All Rights Reserved.
 //         </p>
 //         <p className="text-sm text-gray-400">
 //           Powered by <span className="text-white">KTL Software Inc.</span>
