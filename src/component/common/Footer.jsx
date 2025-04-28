@@ -57,7 +57,7 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h3 className="text-lg font-semibold text-orange-500 mb-2">Yatin's Kitchen</h3>
           <p className="text-sm text-gray-400 mb-1">
-            Copyright © 2018 Yatin’s kitchen - All Rights Reserved.
+            Copyright © 2025 Yatin’s kitchen - All Rights Reserved.
           </p>
           <p className="text-sm text-gray-400">
             Powered by <span className="text-white">KTL Software Inc.</span>
