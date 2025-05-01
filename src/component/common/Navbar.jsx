@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-import logo from "../../assets/about/logo.png";
+// import logo from "../../assets/about/logo.png";
+import logo from "../../assets/home/img.jpg"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <div className="font-sans">
+      <div className="font-sans ">
         <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-40 backdrop-blur-md shadow-md py-4 px-6 flex justify-between items-center z-50">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
                 src={logo}
                 alt="Yatin's Kitchen Logo"
-                className="h-13 w-auto mr-2"
+                className="h-15 w-auto mr-2 "
               />
-              <div className="text-orange-500 text-3xl font-bold">
+              {/* <div className="text-orange-500 text-3xl font-bold">
                 Yatin's kitchen
-              </div>
+              </div> */}
             </Link>
           </div>
 
