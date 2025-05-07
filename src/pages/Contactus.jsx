@@ -57,7 +57,7 @@ const Contactus = () => {
         </form>
       </div>
        {/* Google Map Embed for Wetaskiwin Location */}
-<div className="mt-12">
+<div className="ab">
   <iframe
     title="Trafficology Wetaskiwin Location"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.603588507815!2d-113.37349742300177!3d52.97238677179825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a9565b3f478dc3%3A0x3de25739e1be776!2s5216C%2050%20Ave%2C%20Wetaskiwin%2C%20AB%20T9A%200S8%2C%20Canada!5e0!3m2!1sen!2sca!4v1715082233802"
