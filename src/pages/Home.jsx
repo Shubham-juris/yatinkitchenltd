@@ -213,8 +213,7 @@ const Home = () => {
               Calgary Herald
             </h3>
             <p className="mt-2 text-gray-600">
-              "The chef knows their way around Tandoori chicken; one of the best
-              food spots in Calgary, CANADA."
+            "The chef truly knows their craft — one of the best food spots in Calgary, CANADA."
             </p>
           </div>
         </div>
